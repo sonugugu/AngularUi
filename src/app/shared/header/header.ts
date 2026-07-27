@@ -8,7 +8,14 @@ import { Router,RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './header.css'
 })
 export class Header {
+   categoryExpanded = false;
+
 constructor(private router: Router) {}
+
+  toggleCategory() {
+    this.categoryExpanded = !this.categoryExpanded;
+  }
+
 
   logout() {
 

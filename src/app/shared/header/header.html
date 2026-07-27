@@ -4,26 +4,87 @@
 
   <nav>
 
+    <!-- Dashboard -->
     <a
       routerLink="/dashboard"
       routerLinkActive="active">
       Dashboard
     </a>
 
+    <!-- Products -->
     <a
       routerLink="/products"
       routerLinkActive="active">
       Products
     </a>
 
+    <!-- Add Product -->
     <a
       routerLink="/add-product"
       routerLinkActive="active">
       Add Product
     </a>
 
+
+    <!-- Category Menu -->
+    <div class="menu-item">
+
+      <!-- Category Main Menu -->
+      <div
+        class="menu-title"
+        (click)="toggleCategory()">
+
+        Category
+
+        <span>
+          {{ categoryExpanded ? '▲' : '▼' }}
+        </span>
+
+      </div>
+
+
+      <!-- Category Sub Menu -->
+      @if (categoryExpanded) {
+
+        <div class="submenu">
+            <!-- All Category -->
+      <a
+        routerLink="/categories"
+        routerLinkActive="active">
+        All Category
+      </a>
+
+          <!-- Add Category -->
+          <a
+            routerLink="/add-category"
+            routerLinkActive="active">
+            Add Category
+          </a>
+
+          <!-- Update Category -->
+          <a
+            routerLink="/update-category"
+            routerLinkActive="active">
+            Update Category
+          </a>
+
+          <!-- Delete Category -->
+          <a
+            routerLink="/delete-category"
+            routerLinkActive="active">
+            Delete Category
+          </a>
+
+        </div>
+
+      }
+
+    </div>
+
   </nav>
 
+
+  <!-- Logout -->
   <button (click)="logout()">
     Logout
   </button>

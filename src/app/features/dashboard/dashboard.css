@@ -10,3 +10,31 @@
 .dashboard p {
   font-size: 18px;
 }
+
+.dashboard-container {
+  min-height: 100vh;
+  position: relative;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.dashboard-footer {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+
+  display: flex;
+  gap: 30px;
+}
+
+.dashboard-footer a {
+  font-size: 28px;
+  color: #555;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dashboard-footer a:hover {
+  color: blue;
+  text-decoration: underline;
+}
