@@ -23,6 +23,9 @@ export class Login {
 
       this.errorMessage = '';
 
+      // Save login status
+      localStorage.setItem('isLoggedIn', 'true');
+
       // Login successful
       this.router.navigate(['/dashboard']);
 
